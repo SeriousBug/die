@@ -1,24 +1,31 @@
-# die-exit
+# die-exit-2
 
-![GitHub](https://img.shields.io/github/license/Xavientois/die)
-![GitHub Workflow Status](https://github.com/Xavientois/die/workflows/tests/badge.svg)
-[![Latest Version](https://img.shields.io/crates/v/die-exit.svg)](https://crates.io/crates/die-exit)
-[![Documentation](https://docs.rs/die-exit/badge.svg)](https://docs.rs/die-exit)
+![GitHub](https://img.shields.io/github/license/SeriousBug/die)
+![GitHub Workflow Status](https://github.com/SeriousBug/die/workflows/tests/badge.svg)
+[![Latest Version](https://img.shields.io/crates/v/die-exit-2.svg)](https://crates.io/crates/die-exit-2)
+[![Documentation](https://docs.rs/die-exit-2/badge.svg)](https://docs.rs/die-exit-2)
 
-[die-exit] is a simple Rust library to make it easy to handle errors and exit in command line programs.
-It is forked from the [die] library, but includes an additional `test` feature which will replace
-exit behaviour with a call to `panic!` in order to facilitate testing.
+[die-exit-2] is a simple Rust library to make it easy to handle errors and exit in command line programs.
+
+It is forked from [die-exit], which in turn is a fork of [die]. The fork only
+exists to publish the updated version of `die-exit`: the code ha updates that
+were never published to crates.io. I needed an updated version on `crates.io` so
+I could publish a crate that depends on it, so I'm publishing this fork. This
+fork will be deprecated if the original crate publishes an updated version at
+some point.
 
 [die]: https://code.moparisthebest.com/moparisthebest/die
 [die-exit]: https://github.com/Xavientois/die
 
 ## Cargo.toml
+
 ```toml
 [dependencies]
-die-exit = "0.3"
+die-exit-2 = "0.4"
 
-[dev-dependencies.die-exit]
-version = "0.3"
+# When added, `die!()` will trigger a panic rather than exiting during development.
+[dev-dependencies.die-exit-2]
+version = "0.4"
 features = ["test"]
 ```
 
@@ -55,6 +62,7 @@ die!(); // prints nothing, only exits with code 1
 ## Example testing:
 
 Ensure that the `test` feature is turned on.
+
 ```rust
 #[cfg(test)]
 mod tests {
@@ -70,6 +78,7 @@ mod tests {
 ```
 
 ## `cargo` Features
+
 - **test**: Turn this on if you want to run tests where `die` might be used.
   This will change the behaviour of `die` and its variants to call `panic!()`
   instead of `process::exit()`.
@@ -77,4 +86,4 @@ mod tests {
 # License
 
 This project is licensed under the MIT license ([LICENSE-MIT](LICENSE-MIT)
-   http://opensource.org/licenses/MIT)
+http://opensource.org/licenses/MIT)
