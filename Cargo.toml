@@ -9,7 +9,7 @@ authors = [
 description = "Handle errors and exit in command line programs easily. Fork of die-exit to release the updated version."
 repository = "https://github.com/SeriousBug/die"
 keywords = ["die", "stderr", "cmd", "cmdline", "exit"]
-categories = []
+categories = ["command-line-utilities"]
 license = "MIT"
 
 [features]

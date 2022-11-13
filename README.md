@@ -32,7 +32,7 @@ features = ["test"]
 ## Example usage:
 
 ```rust
-use die_exit::*;
+use die_exit_2::*;
 // Result:
 Ok(1).die("no number"); // unwraps to 1 successfully
 Err("failure").die("strange error"); // prints `strange error` to stderr then exits with code 1
@@ -67,7 +67,7 @@ Ensure that the `test` feature is turned on.
 #[cfg(test)]
 mod tests {
     use super::*;
-    use die_exit::*;
+    use die_exit_2::*;
 
     #[test]
     #[should_panic]

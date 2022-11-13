@@ -1,5 +1,5 @@
-extern crate die_exit;
-use die_exit::*;
+extern crate die_exit_2;
+use die_exit_2::*;
 
 #[test]
 #[should_panic(expected = "Exited with code 42")]
