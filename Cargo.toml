@@ -1,12 +1,12 @@
 [package]
 name = "die-exit-2"
-version = "0.4.0"
+version = "0.4.1"
 authors = [
   "moparisthebest <admin@moparisthebest.com>",
   "Xavientois <joshua.rampersad@hotmail.com>",
   "Kaan Barmore-Genç <kaan@bgenc.net>",
 ]
-description = "Handle errors and exit in command line programs easily. Fork of die-exit to release the updated version."
+description = "Archived, please use die-exit."
 repository = "https://github.com/SeriousBug/die"
 keywords = ["die", "stderr", "cmd", "cmdline", "exit"]
 categories = ["command-line-utilities"]
